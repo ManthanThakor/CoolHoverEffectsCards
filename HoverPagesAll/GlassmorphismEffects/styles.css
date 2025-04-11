@@ -1,0 +1,31 @@
+/* Glassmorphism Hover Card */
+.hover-card-glass {
+  height: 280px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.hover-card-glass:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+}
+
+.hover-card-glass .card-content {
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.1), transparent);
+  transition: all 0.4s ease;
+}
+
+.hover-card-glass:hover .card-content {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.2), transparent);
+}

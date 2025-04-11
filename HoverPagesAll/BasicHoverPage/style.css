@@ -1,0 +1,61 @@
+/* Basic Hover Card */
+.hover-card-basic {
+  height: 280px;
+  background: var(--card-bg);
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease;
+  border: 1px solid var(--glass-border);
+}
+
+.hover-card-basic:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hover-card-basic .card-content {
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  transform: translateY(70%);
+  transition: all 0.4s ease;
+}
+
+.hover-card-basic:hover .card-content {
+  transform: translateY(0);
+}
+
+.hover-card-basic .card-content h3 {
+  margin-bottom: 10px;
+}
+
+.hover-card-basic .card-content p {
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.hover-card-basic:hover .card-content p {
+  opacity: 1;
+}
+
+.copy-btn {
+  background-color: #4caf50;
+  color: white;
+  margin-left: 15px;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.copy-btn:hover {
+  background-color: #45a049;
+}

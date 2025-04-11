@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glassmorphism Effects - Cool Hover Cards</title>
+    <link rel="stylesheet" href="../../styles/home.css" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left Side Navbar (Same as index.html) -->
+      <nav class="sidebar">
+        <div class="logo">
+          <h2>HoverFX</h2>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="../../index.html"
+              ><i class="fas fa-home"></i> <span>Home</span></a
+            >
+          </li>
+          <li>
+            <a href="../BasicHoverPage/BasicHoverEffects.html"
+              ><i class="fas fa-magic"></i> <span>Basic Hover</span></a
+            >
+          </li>
+          <li>
+            <a href="3d-hover.html"
+              ><i class="fas fa-cube"></i> <span>3D Effects</span></a
+            >
+          </li>
+          <li>
+            <a href="glassmorphism.html" class="active"
+              ><i class="fas fa-glass-martini"></i>
+              <span>Glassmorphism</span></a
+            >
+          </li>
+          <li>
+            <a href="neon.html"
+              ><i class="fas fa-lightbulb"></i> <span>Neon Effects</span></a
+            >
+          </li>
+          <li>
+            <a href="interactive.html"
+              ><i class="fas fa-hand-pointer"></i> <span>Interactive</span></a
+            >
+          </li>
+        </ul>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </nav>
+
+      <!-- Main Content Area -->
+      <main class="content">
+        <header>
+          <div class="mobile-menu">
+            <i class="fas fa-bars" id="menu-toggle"></i>
+          </div>
+          <h1>Glassmorphism Effect Cards</h1>
+        </header>
+
+        <!-- Page Description -->
+        <section class="page-description">
+          <div class="description-content glassmorphism">
+            <h2 style="padding-left: 15px">Modern Glassmorphism Design</h2>
+            <p style="padding-left: 15px">
+              Discover the elegant frosted glass effect that's trending in
+              modern UI design. These cards feature blur effects, transparency,
+              and subtle borders that create the illusion of frosted glass.
+            </p>
+          </div>
+        </section>
+
+        <!-- Cards Container -->
+        <section class="hover-card-container">
+          <!-- Card 1 -->
+          <div class="hover-card-glass">
+            <div class="card-content">
+              <h3>Basic Glass</h3>
+              <p>Simple glassmorphism effect with subtle transparency.</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="hover-card-glass">
+            <div class="card-content">
+              <h3>Gradient Glass</h3>
+              <p>Glass effect with colorful gradient background.</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="hover-card-glass">
+            <div class="card-content">
+              <h3>Border Glow</h3>
+              <p>Frosted glass card with illuminated border on hover.</p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="hover-card-glass">
+            <div class="card-content">
+              <h3>Deep Blur</h3>
+              <p>Enhanced blur effect for stronger glass appearance.</p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="hover-card-glass">
+            <div class="card-content">
+              <h3>Dark Glass</h3>
+              <p>Darker variant of glassmorphism with higher opacity.</p>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="hover-card-glass">
+            <div class="card-content">
+              <h3>Layered Glass</h3>
+              <p>Multiple layers of glass creating depth effect.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Code Example Section -->
+        <section class="code-example glassmorphism">
+          <h2 style="padding-left: 15px">How to Create Glassmorphism</h2>
+          <div class="code-container">
+            <pre style="overflow-x: auto"><code>
+                        .hover-card-glass {
+                            height: 280px;
+                            background: rgba(255, 255, 255, 0.05);
+                            backdrop-filter: blur(10px);
+                            border-radius: 15px;
+                            overflow: hidden;
+                            position: relative;
+                            transition: all 0.4s ease;
+                            border: 1px solid rgba(255, 255, 255, 0.1);
+                            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                        }
+
+                        .hover-card-glass:hover {
+                            background: rgba(255, 255, 255, 0.1);
+                            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+                            transform: translateY(-10px);
+                        }
+
+                        .hover-card-glass .card-content {
+                            padding: 20px;
+                            position: absolute;
+                            bottom: 0;
+                            width: 100%;
+                            background: linear-gradient(to top, 
+                                        rgba(255, 255, 255, 0.1), 
+                                        transparent);
+                            transition: all 0.4s ease;
+                        }
+                    </code></pre>
+          </div>
+        </section>
+
+        <footer>
+          <div class="footer-content">
+            <div class="footer-section about">
+              <h3>HoverFX</h3>
+              <p>
+                A collection of beautiful hover effects for modern web design
+                projects.
+              </p>
+            </div>
+            <div class="footer-section links">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="basic-hover.html">Effects Gallery</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="footer-section social">
+              <h3>Follow Us</h3>
+              <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2025 HoverFX. All Rights Reserved.</p>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <script src="../../scripts/home.js"></script>
+  </body>
+</html>

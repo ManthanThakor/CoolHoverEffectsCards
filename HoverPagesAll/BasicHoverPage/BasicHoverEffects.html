@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Hover Effects - Cool Hover Cards</title>
+    <link rel="stylesheet" href="../../styles/home.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left Side Navbar (Same as index.html) -->
+      <nav class="sidebar">
+        <div class="logo">
+          <h2>HoverFX</h2>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="../../index.html"
+              ><i class="fas fa-home"></i> <span>Home</span></a
+            >
+          </li>
+          <li>
+            <a href="BasicHoverEffects.html" class="active"
+              ><i class="fas fa-magic"></i> <span>Basic Hover</span></a
+            >
+          </li>
+          <li>
+            <a href="3d-hover.html"
+              ><i class="fas fa-cube"></i> <span>3D Effects</span></a
+            >
+          </li>
+          <li>
+            <a href="../GlassmorphismEffects/glassmorphism.html"
+              ><i class="fas fa-glass-martini"></i>
+              <span>Glassmorphism</span></a
+            >
+          </li>
+          <li>
+            <a href="neon.html"
+              ><i class="fas fa-lightbulb"></i> <span>Neon Effects</span></a
+            >
+          </li>
+          <li>
+            <a href="interactive.html"
+              ><i class="fas fa-hand-pointer"></i> <span>Interactive</span></a
+            >
+          </li>
+        </ul>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </nav>
+
+      <!-- Main Content Area -->
+      <main class="content">
+        <header>
+          <div class="mobile-menu">
+            <i class="fas fa-bars" id="menu-toggle"></i>
+          </div>
+          <h1>Basic Hover Effect Cards</h1>
+        </header>
+
+        <!-- Page Description -->
+        <section class="page-description">
+          <div class="description-content">
+            <h2 style="padding-left: 15px">
+              Simple Yet Effective Hover Transitions
+            </h2>
+            <p style="padding-left: 15px">
+              These basic hover effect cards demonstrate smooth transitions and
+              elegant animations. Hover over each card to see the effects in
+              action.
+            </p>
+          </div>
+        </section>
+
+        <!-- Cards Container -->
+        <section class="hover-card-container">
+          <!-- Card 1 -->
+          <div class="hover-card-basic">
+            <div class="card-content">
+              <h3>Slide Up Effect</h3>
+              <p>
+                This card reveals content with a smooth slide-up animation when
+                you hover over it.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="hover-card-basic">
+            <div class="card-content">
+              <h3>Fade In Effect</h3>
+              <p>Content fades in gradually when you hover over this card.</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="hover-card-basic">
+            <div class="card-content">
+              <h3>Scale Effect</h3>
+              <p>
+                This card slightly scales up on hover, creating a subtle zoom
+                effect.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="hover-card-basic">
+            <div class="card-content">
+              <h3>Shadow Effect</h3>
+              <p>A gentle shadow appears when hovering over this card.</p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="hover-card-basic">
+            <div class="card-content">
+              <h3>Color Transition</h3>
+              <p>Background color transitions smoothly on hover.</p>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="hover-card-basic">
+            <div class="card-content">
+              <h3>Border Effect</h3>
+              <p>
+                This card's border animates on hover, creating a highlight
+                effect.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="code-example">
+          <h2 style="padding-left: 15px">How to Create These Cards</h2>
+          <div class="code-container">
+            <!-- Copy Button -->
+            <button class="copy-btn" onclick="copyCode()">
+              <i class="fa-solid fa-copy"></i>
+            </button>
+
+            <!-- Code Block -->
+            <pre style="overflow-x: auto"><code id="code-block">
+                .hover-card-basic {
+                    height: 280px;
+                    background: rgba(26, 32, 53, 0.7);
+                    border-radius: 15px;
+                    overflow: hidden;
+                    position: relative;
+                    transition: all 0.4s ease;
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                }
+          
+                .hover-card-basic:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+                }
+          
+                .hover-card-basic .card-content {
+                    padding: 20px;
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+                    transform: translateY(70%);
+                    transition: all 0.4s ease;
+                }
+          
+                .hover-card-basic:hover .card-content {
+                    transform: translateY(0);
+                }
+          
+                .hover-card-basic .card-content p {
+                    opacity: 0;
+                    transition: all 0.4s ease;
+                }
+          
+                .hover-card-basic:hover .card-content p {
+                    opacity: 1;
+                }
+              </code></pre>
+          </div>
+        </section>
+
+        <!-- Footer (Same as index.html) -->
+        <footer>
+          <div class="footer-content">
+            <div class="footer-section about">
+              <h3>HoverFX</h3>
+              <p>
+                A collection of beautiful hover effects for modern web design
+                projects.
+              </p>
+            </div>
+            <div class="footer-section links">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="basic-hover.html">Effects Gallery</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="footer-section social">
+              <h3>Follow Us</h3>
+              <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2025 HoverFX. All Rights Reserved.</p>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <script src="../../scripts/home.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
