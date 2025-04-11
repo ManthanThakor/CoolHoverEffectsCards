@@ -1,0 +1,41 @@
+/* Neon Hover Card */
+.hover-card-neon {
+  height: 280px;
+  background: var(--card-bg);
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease;
+  border: 1px solid var(--glass-border);
+}
+
+.hover-card-neon:hover {
+  box-shadow: 0 0 20px var(--primary-color), 0 0 40px rgba(138, 43, 226, 0.4);
+  border-color: var(--primary-color);
+}
+
+.hover-card-neon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, var(--primary-color), transparent);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.hover-card-neon:hover::before {
+  opacity: 0.2;
+}
+
+.hover-card-neon .card-content {
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transition: all 0.4s ease;
+}
+
+.hover-card-neon:hover .card-content h3 {
+  color: var(--primary-color);
+  text-shadow: 0 0 10px rgba(138, 43, 226, 0.7);
+}

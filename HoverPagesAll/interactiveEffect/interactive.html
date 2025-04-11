@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Hover Effects - Cool Hover Cards</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../../styles/home.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left Side Navbar (Same as index.html) -->
+      <nav class="sidebar">
+        <div class="logo">
+          <h2>HoverFX</h2>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="../../index.html"
+              ><i class="fas fa-home"></i> <span>Home</span></a
+            >
+          </li>
+          <li>
+            <a href="../BasicHoverPage/BasicHoverEffects.html"
+              ><i class="fas fa-magic"></i> <span>Basic Hover</span></a
+            >
+          </li>
+          <li>
+            <a href="../3dEffects/3d-hover.html"
+              ><i class="fas fa-cube"></i> <span>3D Effects</span></a
+            >
+          </li>
+          <li>
+            <a href="../GlassmorphismEffects/glassmorphism.html"
+              ><i class="fas fa-glass-martini"></i>
+              <span>Glassmorphism</span></a
+            >
+          </li>
+          <li>
+            <a href="../NeonEffect/neon.html"
+              ><i class="fas fa-lightbulb"></i> <span>Neon Effects</span></a
+            >
+          </li>
+          <li>
+            <a href="../interactiveEffect/interactive.html" class="active"
+              ><i class="fas fa-hand-pointer"></i> <span>Interactive</span></a
+            >
+          </li>
+        </ul>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </nav>
+
+      <!-- Main Content Area -->
+      <main class="content">
+        <header>
+          <div class="mobile-menu">
+            <i class="fas fa-bars" id="menu-toggle"></i>
+          </div>
+          <h1>Interactive Hover Effect Cards</h1>
+        </header>
+
+        <!-- Page Description -->
+        <section class="page-description">
+          <div class="description-content">
+            <h2 style="padding-left: 15px">
+              Advanced Interactive Hover Effects
+            </h2>
+            <p style="padding-left: 15px">
+              Experience the most engaging and interactive hover effects in this
+              collection. These cards respond dynamically to user actions with
+              flips, reveals, and transformations.
+            </p>
+          </div>
+        </section>
+
+        <!-- Cards Container -->
+        <section class="hover-card-container">
+          <!-- Card 1 -->
+          <div class="hover-card-interactive">
+            <div class="card-front">
+              <div class="card-content">
+                <h3>Flip Card</h3>
+                <p>Hover to reveal back side</p>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Card Back</h3>
+              <p>This is the back content</p>
+              <button class="btn">Click Me</button>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="hover-card-interactive">
+            <div class="card-front">
+              <div class="card-content">
+                <h3>Info Reveal</h3>
+                <p>Hover for more information</p>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Detailed Info</h3>
+              <p>
+                Extended description with more details about this card's
+                functionality.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="hover-card-interactive">
+            <div class="card-front">
+              <div class="card-content">
+                <h3>Image Swap</h3>
+                <p>Hover to see alternate image</p>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Alternate View</h3>
+              <p>Different perspective revealed on hover</p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="hover-card-interactive">
+            <div class="card-front">
+              <div class="card-content">
+                <h3>Action Card</h3>
+                <p>Hover to see options</p>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Choose Action</h3>
+              <div class="action-buttons">
+                <button class="btn">Action 1</button>
+                <button class="btn">Action 2</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="hover-card-interactive">
+            <div class="card-front">
+              <div class="card-content">
+                <h3>Zoom Detail</h3>
+                <p>Hover to zoom in</p>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Zoomed View</h3>
+              <p>Detailed close-up view of content</p>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="hover-card-interactive">
+            <div class="card-front">
+              <div class="card-content">
+                <h3>Quiz Card</h3>
+                <p>Hover to see answer</p>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Answer</h3>
+              <p>The answer is revealed on hover!</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Code Example Section -->
+        <section class="code-example">
+          <h2 style="padding-left: 15px">
+            How to Create Interactive Flip Cards
+          </h2>
+          <div class="code-container">
+            <pre style="overflow-x: auto"><code>
+              .hover-card-interactive {
+                  height: 280px;
+                  background: rgba(26, 32, 53, 0.7);
+                  border-radius: 15px;
+                  overflow: hidden;
+                  position: relative;
+                  transition: all 0.4s ease;
+                  border: 1px solid rgba(255, 255, 255, 0.1);
+              }
+
+              .hover-card-interactive .card-front,
+              .hover-card-interactive .card-back {
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  backface-visibility: hidden;
+                  transition: all 0.6s ease;
+              }
+
+              .hover-card-interactive .card-back {
+                  transform: rotateY(180deg);
+                  padding: 20px;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  background: rgba(38, 46, 71, 0.8);
+              }
+
+              .hover-card-interactive:hover .card-front {
+                  transform: rotateY(180deg);
+              }
+
+              .hover-card-interactive:hover .card-back {
+                  transform: rotateY(0);
+              }
+
+              .action-buttons {
+                  display: flex;
+                  gap: 10px;
+                  margin-top: 15px;
+              }
+                    </code></pre>
+          </div>
+        </section>
+
+        <!-- Footer (Same as index.html) -->
+        <footer>
+          <div class="footer-content">
+            <div class="footer-section about">
+              <h3>HoverFX</h3>
+              <p>
+                A collection of beautiful hover effects for modern web design
+                projects.
+              </p>
+            </div>
+            <div class="footer-section links">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="basic-hover.html">Effects Gallery</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="footer-section social">
+              <h3>Follow Us</h3>
+              <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2025 HoverFX. All Rights Reserved.</p>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <script src="../../scripts/home.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

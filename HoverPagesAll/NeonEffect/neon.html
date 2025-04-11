@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Glassmorphism Effects - Cool Hover Cards</title>
-    <link rel="stylesheet" href="../../styles/home.css" />
+    <title>Neon Hover Effects - Cool Hover Cards</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../../styles/home.css" />
 
     <link
       rel="stylesheet"
@@ -36,13 +36,13 @@
             >
           </li>
           <li>
-            <a href="../GlassmorphismEffects/glassmorphism.html" class="active"
+            <a href="../GlassmorphismEffects/glassmorphism.html"
               ><i class="fas fa-glass-martini"></i>
               <span>Glassmorphism</span></a
             >
           </li>
           <li>
-            <a href="../NeonEffect/neon.html"
+            <a href="neon.html" class="active"
               ><i class="fas fa-lightbulb"></i> <span>Neon Effects</span></a
             >
           </li>
@@ -65,17 +65,17 @@
           <div class="mobile-menu">
             <i class="fas fa-bars" id="menu-toggle"></i>
           </div>
-          <h1>Glassmorphism Effect Cards</h1>
+          <h1>Neon Hover Effect Cards</h1>
         </header>
 
         <!-- Page Description -->
         <section class="page-description">
-          <div class="description-content glassmorphism">
-            <h2 style="padding-left: 15px">Modern Glassmorphism Design</h2>
+          <div class="description-content">
+            <h2 style="padding-left: 15px">Vibrant Neon Glow Effects</h2>
             <p style="padding-left: 15px">
-              Discover the elegant frosted glass effect that's trending in
-              modern UI design. These cards feature blur effects, transparency,
-              and subtle borders that create the illusion of frosted glass.
+              Add electrifying energy to your designs with these neon-inspired
+              hover effects. These cards feature glowing borders, text, and
+              shadows that evoke the vibrant aesthetic of neon signs.
             </p>
           </div>
         </section>
@@ -83,91 +83,101 @@
         <!-- Cards Container -->
         <section class="hover-card-container">
           <!-- Card 1 -->
-          <div class="hover-card-glass">
+          <div class="hover-card-neon">
             <div class="card-content">
-              <h3>Basic Glass</h3>
-              <p>Simple glassmorphism effect with subtle transparency.</p>
+              <h3>Basic Neon</h3>
+              <p>Simple neon glow effect on hover.</p>
             </div>
           </div>
 
           <!-- Card 2 -->
-          <div class="hover-card-glass">
+          <div class="hover-card-neon">
             <div class="card-content">
-              <h3>Gradient Glass</h3>
-              <p>Glass effect with colorful gradient background.</p>
+              <h3>Pulsing Neon</h3>
+              <p>Glow effect that pulses with animation.</p>
             </div>
           </div>
 
           <!-- Card 3 -->
-          <div class="hover-card-glass">
+          <div class="hover-card-neon">
             <div class="card-content">
-              <h3>Border Glow</h3>
-              <p>Frosted glass card with illuminated border on hover.</p>
+              <h3>Neon Border</h3>
+              <p>Card with illuminated border edges.</p>
             </div>
           </div>
 
           <!-- Card 4 -->
-          <div class="hover-card-glass">
+          <div class="hover-card-neon">
             <div class="card-content">
-              <h3>Deep Blur</h3>
-              <p>Enhanced blur effect for stronger glass appearance.</p>
+              <h3>Text Glow</h3>
+              <p>Card with glowing text elements.</p>
             </div>
           </div>
 
           <!-- Card 5 -->
-          <div class="hover-card-glass">
+          <div class="hover-card-neon">
             <div class="card-content">
-              <h3>Dark Glass</h3>
-              <p>Darker variant of glassmorphism with higher opacity.</p>
+              <h3>Shadow Glow</h3>
+              <p>Card with dramatic glowing shadow effects.</p>
             </div>
           </div>
 
           <!-- Card 6 -->
-          <div class="hover-card-glass">
+          <div class="hover-card-neon">
             <div class="card-content">
-              <h3>Layered Glass</h3>
-              <p>Multiple layers of glass creating depth effect.</p>
+              <h3>Colorful Neon</h3>
+              <p>Multi-colored neon effects for vibrant impact.</p>
             </div>
           </div>
         </section>
 
         <!-- Code Example Section -->
-        <section class="code-example glassmorphism">
-          <h2 style="padding-left: 15px">How to Create Glassmorphism</h2>
+        <section class="code-example">
+          <h2 style="padding-left: 15px">How to Create Neon Effects</h2>
           <div class="code-container">
             <pre style="overflow-x: auto"><code>
-                        .hover-card-glass {
-                            height: 280px;
-                            background: rgba(255, 255, 255, 0.05);
-                            backdrop-filter: blur(10px);
-                            border-radius: 15px;
-                            overflow: hidden;
-                            position: relative;
-                            transition: all 0.4s ease;
-                            border: 1px solid rgba(255, 255, 255, 0.1);
-                            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-                        }
+                .hover-card-neon {
+                    height: 280px;
+                    background: rgba(26, 32, 53, 0.7);
+                    border-radius: 15px;
+                    overflow: hidden;
+                    position: relative;
+                    transition: all 0.4s ease;
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                }
 
-                        .hover-card-glass:hover {
-                            background: rgba(255, 255, 255, 0.1);
-                            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-                            transform: translateY(-10px);
-                        }
+                .hover-card-neon:hover {
+                    box-shadow: 0 0 20px var(--primary-color),
+                                0 0 40px rgba(138, 43, 226, 0.4);
+                    border-color: var(--primary-color);
+                }
 
-                        .hover-card-glass .card-content {
-                            padding: 20px;
-                            position: absolute;
-                            bottom: 0;
-                            width: 100%;
-                            background: linear-gradient(to top, 
-                                        rgba(255, 255, 255, 0.1), 
-                                        transparent);
-                            transition: all 0.4s ease;
-                        }
+                .hover-card-neon:hover .card-content h3 {
+                    color: var(--primary-color);
+                    text-shadow: 0 0 10px rgba(138, 43, 226, 0.7);
+                }
+
+                /* For pulsing effect */
+                @keyframes pulse {
+                    0% {
+                        box-shadow: 0 0 0 0 rgba(138, 43, 226, 0.4);
+                    }
+                    70% {
+                        box-shadow: 0 0 0 15px rgba(138, 43, 226, 0);
+                    }
+                    100% {
+                        box-shadow: 0 0 0 0 rgba(138, 43, 226, 0);
+                    }
+                }
+
+                .pulse {
+                    animation: pulse 2s infinite;
+                }
                     </code></pre>
           </div>
         </section>
 
+        <!-- Footer (Same as index.html) -->
         <footer>
           <div class="footer-content">
             <div class="footer-section about">
@@ -203,6 +213,7 @@
       </main>
     </div>
 
+    <script src="script.js"></script>
     <script src="../../scripts/home.js"></script>
   </body>
 </html>
