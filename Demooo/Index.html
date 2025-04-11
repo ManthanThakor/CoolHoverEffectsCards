@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime Girl Gallery</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #0f0f0f;
+        color: #fff;
+        margin: 0;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #ff7675;
+      }
+
+      .description {
+        text-align: center;
+        font-size: 18px;
+        color: #f5f6fa;
+        margin-bottom: 30px;
+      }
+
+      .gallery {
+        display: flex;
+        flex-wrap: nowrap; /* Prevent wrapping */
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 20px; /* Add space between rows */
+      }
+
+      .card {
+        background-color: #1f1f1f;
+        border-radius: 12px;
+        overflow: hidden;
+        width: 150px;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        position: relative;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s ease;
+      }
+
+      .card:hover {
+        width: 300px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        z-index: 10;
+      }
+
+      .card-title {
+        padding: 10px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        color: #f5f6fa;
+        white-space: nowrap; /* Prevent text wrapping */
+      }
+
+      .card-overlay {
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        color: #fff;
+        font-size: 12px;
+        transition: bottom 0.4s ease;
+      }
+
+      .card:hover .card-overlay {
+        bottom: 0;
+      }
+
+      /* Glow effect for mobile and tablet */
+      @media (max-width: 768px) {
+        .card:hover {
+          width: 150px; /* Reset width for mobile and tablet */
+          box-shadow: 0 0 20px rgba(255, 118, 117, 0.8); /* Glow effect */
+        }
+
+        .gallery {
+          flex-wrap: wrap; /* Enable flex-wrap for mobile and tablet */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Anime Girl Gallery</h1>
+    <div class="description">
+      Explore a collection of stunning anime girls from various series. Hover
+      over the cards to learn more about them!
+    </div>
+    <div id="gallery-container"></div>
+
+    <script>
+      const data = [
+        {
+          title: "Rem",
+          image: "https://wallpapercave.com/wp/wp9006584.jpg",
+          description: "A loyal and kind-hearted demon maid.",
+        },
+        {
+          title: "Zero Two",
+          image: "https://wallpapercave.com/wp/wp10524580.jpg",
+          description: "A mysterious and fearless pilot.",
+        },
+        {
+          title: "Nezuko",
+          image:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKUM13vgchEO3wO7SERt--ReNcdGVUlCTfNAQsfMiuefoufsZMRsXN_w8SzvGXz5v-VaU&usqp=CAU",
+          description: "A gentle demon with a strong will.",
+        },
+        {
+          title: "Asuna",
+          image: "https://wallpapercave.com/wp/wp9655915.jpg",
+          description: "A skilled swordswoman and loving partner.",
+        },
+        {
+          title: "Mikasa",
+          image:
+            "https://static.vecteezy.com/system/resources/thumbnails/033/662/051/small/cartoon-lofi-young-manga-style-girl-while-listening-to-music-in-the-rain-ai-generative-photo.jpg",
+          description: "A fierce protector with unmatched strength.",
+        },
+        {
+          title: "Hinata",
+          image: "https://wallpapercave.com/wp/wp9655915.jpg",
+          description: "A shy yet determined ninja.",
+        },
+        {
+          title: "Rukia",
+          image:
+            "https://static.vecteezy.com/system/resources/thumbnails/033/662/051/small/cartoon-lofi-young-manga-style-girl-while-listening-to-music-in-the-rain-ai-generative-photo.jpg",
+          description: "A noble soul reaper with a strong sense of justice.",
+        },
+        {
+          title: "Erza",
+          image: "https://wallpapercave.com/wp/wp9655915.jpg",
+          description: "A powerful and fearless mage.",
+        },
+        {
+          title: "Saber",
+          image: "https://wallpapercave.com/wp/wp9655915.jpg",
+          description: "A noble and valiant knight.",
+        },
+        {
+          title: "Yoruichi",
+          image: "https://wallpapercave.com/wp/wp9006584.jpg",
+          description: "A swift and cunning warrior.",
+        },
+        {
+          title: "Kallen",
+          image: "https://wallpapercave.com/wp/wp10524580.jpg",
+          description: "A skilled pilot and freedom fighter.",
+        },
+        {
+          title: "Mai",
+          image:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKUM13vgchEO3wO7SERt--ReNcdGVUlCTfNAQsfMiuefoufsZMRsXN_w8SzvGXz5v-VaU&usqp=CAU",
+          description: "A calm and collected shrine maiden.",
+        },
+        {
+          title: "Raphtalia",
+          image: "https://wallpapercave.com/wp/wp9655915.jpg",
+          description: "A loyal and brave demi-human.",
+        },
+        {
+          title: "Tohru",
+          image:
+            "https://static.vecteezy.com/system/resources/thumbnails/033/662/051/small/cartoon-lofi-young-manga-style-girl-while-listening-to-music-in-the-rain-ai-generative-photo.jpg",
+          description: "A kind-hearted dragon in human form.",
+        },
+        {
+          title: "Yotsuba",
+          image: "https://wallpapercave.com/wp/wp9655915.jpg",
+          description: "A cheerful and energetic girl.",
+        },
+        {
+          title: "Yotsuba",
+          image: "https://wallpapercave.com/wp/wp9655915.jpg",
+          description: "A cheerful and energetic girl.",
+        },
+      ];
+
+      const galleryContainer = document.getElementById("gallery-container");
+
+      // Function to create a gallery row with 8 cards
+      function createGalleryRow(items) {
+        const galleryRow = document.createElement("div");
+        galleryRow.className = "gallery";
+
+        items.forEach((item) => {
+          const card = document.createElement("div");
+          card.className = "card";
+
+          card.innerHTML = `
+            <img src="${item.image}" alt="${item.title}">
+            <div class="card-title">${item.title}</div>
+            <div class="card-overlay">${item.description}</div>
+          `;
+
+          galleryRow.appendChild(card);
+        });
+
+        galleryContainer.appendChild(galleryRow);
+      }
+
+      // Split data into chunks of 8 and create rows
+      const chunkSize = 8;
+      for (let i = 0; i < data.length; i += chunkSize) {
+        const chunk = data.slice(i, i + chunkSize);
+        createGalleryRow(chunk);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime Card Gallery</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #0f0f0f;
+        color: #fff;
+        margin: 0;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-weight: bold;
+        color: #ff7675;
+      }
+
+      .gallery {
+        display: flex;
+        /* flex-wrap: wrap; */
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .card {
+        background-color: #1f1f1f;
+        border-radius: 12px;
+        overflow: hidden;
+        width: 150px; /* Start width */
+        cursor: pointer;
+        transition: all 0.4s ease;
+        position: relative;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s ease;
+      }
+
+      .card:hover {
+        width: 300px; /* Expand width on hover */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        z-index: 10;
+      }
+
+      .card-title {
+        padding: 10px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        color: #f5f6fa;
+      }
+
+      .card-overlay {
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        color: #fff;
+        font-size: 12px;
+        transition: bottom 0.4s ease;
+      }
+
+      .card:hover .card-overlay {
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Anime Card Gallery</h1>
+    <div class="gallery" id="gallery"></div>
+
+    <script>
+      const data = [
+        {
+          title: "Attack on Titan",
+          image: "https://wallpapercave.com/wp/wp9006584.jpg",
+          description: "Humanity fights against titans.",
+        },
+        {
+          title: "Naruto",
+          image: "https://wallpapercave.com/wp/wp10524580.jpg",
+          description: "A young ninja's journey to become Hokage.",
+        },
+        {
+          title: "Demon Slayer",
+          image:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKUM13vgchEO3wO7SERt--ReNcdGVUlCTfNAQsfMiuefoufsZMRsXN_w8SzvGXz5v-VaU&usqp=CAU",
+          description: "Demon hunting adventures.",
+        },
+        {
+          title: "One Piece",
+          image: "https://wallpapercave.com/wp/wp9655915.jpg",
+          description: "Pirate crew seeking the ultimate treasure.",
+        },
+        {
+          title: "Demon Slayer",
+          image:
+            "https://static.vecteezy.com/system/resources/thumbnails/033/662/051/small/cartoon-lofi-young-manga-style-girl-while-listening-to-music-in-the-rain-ai-generative-photo.jpg",
+          description: "Demon hunting adventures.",
+        },
+        {
+          title: "One Piece",
+          image: "https://wallpapercave.com/wp/wp9655915.jpg",
+          description: "Pirate crew seeking the ultimate treasure.",
+        },
+        {
+          title: "Demon Slayer",
+          image:
+            "https://static.vecteezy.com/system/resources/thumbnails/033/662/051/small/cartoon-lofi-young-manga-style-girl-while-listening-to-music-in-the-rain-ai-generative-photo.jpg",
+          description: "Demon hunting adventures.",
+        },
+        {
+          title: "One Piece",
+          image: "https://wallpapercave.com/wp/wp9655915.jpg",
+          description: "Pirate crew seeking the ultimate treasure.",
+        },
+        {
+          title: "One Piece",
+          image: "https://wallpapercave.com/wp/wp9655915.jpg",
+          description: "Pirate crew seeking the ultimate treasure.",
+        },
+      ];
+
+      const gallery = document.getElementById("gallery");
+
+      data.forEach((item) => {
+        const card = document.createElement("div");
+        card.className = "card";
+
+        card.innerHTML = `
+        <img src="${item.image}" alt="${item.title}">
+        <div class="card-title">${item.title}</div>
+        <div class="card-overlay">${item.description}</div>
+      `;
+
+        gallery.appendChild(card);
+      });
+    </script>
+  </body>
+</html>
