@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basic Hover Effects - Cool Hover Cards</title>
+    <title>Anime Girl Gallery - Cool Hover Cards</title>
     <link rel="stylesheet" href="../../styles/home.css" />
     <link rel="stylesheet" href="style.css" />
     <link
@@ -25,7 +25,7 @@
             >
           </li>
           <li>
-            <a href="../BasicHoverPage/BasicHoverEffects.html" class="active"
+            <a href="../BasicHoverPage/BasicHoverEffects.html"
               ><i class="fas fa-magic"></i> <span>Basic Hover</span></a
             >
           </li>
@@ -52,7 +52,7 @@
           </li>
           <li>
             <a href="animeGirl.html"
-              ><i class="fas fa-hand-pointer"></i> <span>AnimeGirl</span></a
+              ><i class="fas fa-heart"></i> <span>AnimeGirl</span></a
             >
           </li>
         </ul>
@@ -69,131 +69,171 @@
           <div class="mobile-menu">
             <i class="fas fa-bars" id="menu-toggle"></i>
           </div>
-          <h1>Basic Hover Effect Cards</h1>
+          <h1>Anime Girl Gallery</h1>
         </header>
 
         <!-- Page Description -->
         <section class="page-description">
           <div class="description-content">
-            <h2 style="padding-left: 15px">
-              Simple Yet Effective Hover Transitions
-            </h2>
+            <h2 style="padding-left: 15px">Anime Girl card Effect</h2>
             <p style="padding-left: 15px">
-              These basic hover effect cards demonstrate smooth transitions and
-              elegant animations. Hover over each card to see the effects in
-              action.
+              Explore a collection of stunning anime girls from various series.
+              Hover over the cards to learn more about them!
             </p>
           </div>
         </section>
 
         <!-- Cards Container -->
-        <section class="hover-card-container">
-          <!-- Card 1 -->
-          <div class="hover-card-basic">
-            <div class="card-content">
-              <h3>Slide Up Effect</h3>
-              <p>
-                This card reveals content with a smooth slide-up animation when
-                you hover over it.
-              </p>
-            </div>
-          </div>
+        <div id="gallery-container" style="padding: 20px"></div>
 
-          <!-- Card 2 -->
-          <div class="hover-card-basic">
-            <div class="card-content">
-              <h3>Fade In Effect</h3>
-              <p>Content fades in gradually when you hover over this card.</p>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="hover-card-basic">
-            <div class="card-content">
-              <h3>Scale Effect</h3>
-              <p>
-                This card slightly scales up on hover, creating a subtle zoom
-                effect.
-              </p>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="hover-card-basic">
-            <div class="card-content">
-              <h3>Shadow Effect</h3>
-              <p>A gentle shadow appears when hovering over this card.</p>
-            </div>
-          </div>
-
-          <!-- Card 5 -->
-          <div class="hover-card-basic">
-            <div class="card-content">
-              <h3>Color Transition</h3>
-              <p>Background color transitions smoothly on hover.</p>
-            </div>
-          </div>
-
-          <!-- Card 6 -->
-          <div class="hover-card-basic">
-            <div class="card-content">
-              <h3>Border Effect</h3>
-              <p>
-                This card's border animates on hover, creating a highlight
-                effect.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section class="code-example">
-          <h2 style="padding-left: 15px">How to Create These Cards</h2>
-          <div class="code-container">
-            <!-- Copy Button -->
-            <button class="copy-btn" onclick="copyCode()">
-              <i class="fa-solid fa-copy"></i>
+        <section class="code-example" style="margin: 20px">
+          <h2>How to Create These Cards</h2>
+          <div class="code-tabs">
+            <button class="tab-btn active" onclick="openTab('html-tab')">
+              HTML
             </button>
+            <button class="tab-btn" onclick="openTab('css-tab')">CSS</button>
+            <button class="tab-btn" onclick="openTab('js-tab')">
+              JavaScript
+            </button>
+          </div>
 
-            <!-- Code Block -->
-            <pre style="overflow-x: auto"><code id="code-block">
-                .hover-card-basic {
-                    height: 280px;
-                    background: rgba(26, 32, 53, 0.7);
-                    border-radius: 15px;
-                    overflow: hidden;
-                    position: relative;
-                    transition: all 0.4s ease;
-                    border: 1px solid rgba(255, 255, 255, 0.1);
-                }
+          <div id="html-tab" class="tab-content active">
+            <pre><code class="language-html">
+&lt;!-- Cards Container --&gt;
+&lt;div id="gallery-container"&gt;&lt;/div&gt;
+            </code></pre>
+            <button class="copy-btn" onclick="copyCode('html-tab')">
+              Copy HTML
+            </button>
+          </div>
+
+          <div id="css-tab" class="tab-content">
+            <pre><code class="language-css">
+.gallery-sec-anime {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.anime-card {
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 150px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.anime-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.anime-card:hover {
+  width: 300px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.anime-card-title {
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #f5f6fa;
+  white-space: nowrap;
+}
+
+.anime-card-overlay {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+  color: #fff;
+  font-size: 14px;
+  transition: bottom 0.4s ease;
+}
+
+.anime-card:hover .anime-card-overlay {
+  bottom: 0;
+}
+            </code></pre>
+            <button class="copy-btn" onclick="copyCode('css-tab')">
+              Copy CSS
+            </button>
+          </div>
+
+          <div id="js-tab" class="tab-content">
+            <pre><code class="language-javascript">
+          const data = [
+            {
+              title: "your title",
+              image: "your-img.jpg",
+              description: "your-description"
+            }
+          ];
           
-                .hover-card-basic:hover {
-                    transform: translateY(-10px);
-                    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-                }
+          const galleryContainer = document.getElementById("gallery-container");
           
-                .hover-card-basic .card-content {
-                    padding: 20px;
-                    position: absolute;
-                    bottom: 0;
-                    width: 100%;
-                    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-                    transform: translateY(70%);
-                    transition: all 0.4s ease;
-                }
+          // Function to create a gallery row with cards
+          function createGalleryRow(items) {
+            const galleryRow = document.createElement("div");
+            galleryRow.className = "gallery-sec-anime";
           
-                .hover-card-basic:hover .card-content {
-                    transform: translateY(0);
-                }
+            items.forEach((item) => {
+              // Create card container
+              const card = document.createElement("div");
+              card.className = "anime-card";
+              
+              // Create image
+              const img = document.createElement("img");
+              img.src = item.image;
+              img.alt = item.title;
+              
+              // Create title
+              const title = document.createElement("div");
+              title.className = "anime-card-title";
+              title.textContent = item.title;
+              
+              // Create overlay
+              const overlay = document.createElement("div");
+              overlay.className = "anime-card-overlay";
+              overlay.textContent = item.description;
+              
+              // Add everything to card
+              card.appendChild(img);
+              card.appendChild(title);
+              card.appendChild(overlay);
+              
+              // Add card to row
+              galleryRow.appendChild(card);
+            });
           
-                .hover-card-basic .card-content p {
-                    opacity: 0;
-                    transition: all 0.4s ease;
-                }
+            galleryContainer.appendChild(galleryRow);
+          }
           
-                .hover-card-basic:hover .card-content p {
-                    opacity: 1;
-                }
-              </code></pre>
+          // Split data into chunks and create rows
+          const chunkSize = 6;
+          for (let i = 0; i < data.length; i += chunkSize) {
+            const chunk = data.slice(i, i + chunkSize);
+            createGalleryRow(chunk);
+          }
+            </code></pre>
+            <button class="copy-btn" onclick="copyCode('js-tab')">
+              Copy JavaScript
+            </button>
           </div>
         </section>
 
