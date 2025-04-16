@@ -24,37 +24,37 @@ HoverFX is a library of modern, engaging hover effects that can enhance user exp
 
 Transform elements with depth and perspective for immersive 3D interactions.
 
-![3D Effects Demo](https://raw.githubusercontent.com/ManthanThakor/HoverFX/main/images/3d-effects-demo.png)
+![3D Effects Demo](https://github.com/ManthanThakor/HoverFX/blob/main/ReadMeDemoImages/3dEffect.png)
 
 ### Anime Section
 
 Inspired by anime aesthetics, these effects bring dynamic character to web elements.
 
-![Anime Section Demo](https://raw.githubusercontent.com/ManthanThakor/HoverFX/main/images/anime-section-demo.png)
+![Anime Section Demo](https://github.com/ManthanThakor/HoverFX/blob/main/ReadMeDemoImages/AnimeGirl.png)
 
 ### Basic Hover Effects
 
 Simple yet powerful hover transitions for everyday web elements.
 
-![Basic Hover Demo](https://raw.githubusercontent.com/ManthanThakor/HoverFX/main/images/basic-hover-demo.png)
+![Basic Hover Demo](https://github.com/ManthanThakor/HoverFX/blob/main/ReadMeDemoImages/Basic.png)
 
 ### Glassmorphism Effects
 
 Modern frosted glass aesthetic with transparency and blur effects.
 
-![Glassmorphism Demo](https://raw.githubusercontent.com/ManthanThakor/HoverFX/main/images/glassmorphism-demo.png)
+![Glassmorphism Demo](https://github.com/ManthanThakor/HoverFX/blob/main/ReadMeDemoImages/Glassmorephism.png)
 
 ### Neon Effects
 
 Vibrant glowing effects reminiscent of neon lights.
 
-![Neon Effects Demo](https://raw.githubusercontent.com/ManthanThakor/HoverFX/main/images/neon-effects-demo.png)
+![Neon Effects Demo](https://github.com/ManthanThakor/HoverFX/blob/main/ReadMeDemoImages/Neon.png)
 
 ### Interactive Effects
 
 Advanced hover effects with dynamic user interactions.
 
-![Interactive Effects Demo](https://raw.githubusercontent.com/ManthanThakor/HoverFX/main/images/interactive-demo.png)
+![Interactive Effects Demo](https://github.com/ManthanThakor/HoverFX/blob/main/ReadMeDemoImages/Interactive.png)
 
 ## Technologies Used
 
