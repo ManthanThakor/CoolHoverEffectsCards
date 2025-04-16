@@ -1,6 +1,6 @@
 # HoverFX
 
-![HoverFX Banner](https://raw.githubusercontent.com/ManthanThakor/HoverFX/main/images/banner.png)
+![HoverFX Banner](../ReadMeDemoImages/banner.png)
 
 A comprehensive collection of stunning hover effects created with HTML, CSS, and JavaScript. This repository showcases various hover effect techniques that web developers can implement in their projects.
 
