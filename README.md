@@ -42,7 +42,7 @@ Simple yet powerful hover transitions for everyday web elements.
 
 Modern frosted glass aesthetic with transparency and blur effects.
 
-![Glassmorphism Demo](https://github.com/ManthanThakor/HoverFX/blob/main/ReadMeDemoImages/Glassmorphism.png)
+![Glassmorphism Demo](https://raw.githubusercontent.com/ManthanThakor/HoverFX/main/ReadMeDemoImages/Glassmorphism.png)
 
 ### Neon Effects
 
